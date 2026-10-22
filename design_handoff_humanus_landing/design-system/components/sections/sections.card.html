@@ -1,0 +1,21 @@
+<!-- @dsCard group="Components" viewport="700x600" name="Sections — Heading, PhotoFrame, ServiceCard" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script>window.HUMANUS_ASSET_BASE='../../assets/logo/'</script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{margin:0;padding:24px;background:var(--surface-page)}.l{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);margin:0 0 10px}.r{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:22px}</style>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const { Button, Icon, Pill, Logo, SectionHeading, PhotoFrame, ServiceCard, SiteHeader, FloatingWhatsApp } = window.HumanusDesignSystem_dece33;
+function App(){return (<>
+<div style={{display:'grid',gridTemplateColumns:'1.2fr 1fr',gap:28,alignItems:'start'}}>
+<div style={{display:'flex',flexDirection:'column',gap:24}}>
+<SectionHeading eyebrow="Kinesiología" title="La recuperación es un camino." script="Te acompañamos." style={{fontSize:14}}/>
+<div style={{display:'grid',gridTemplateColumns:'1fr 1fr 1fr',gap:10}}><PhotoFrame src="../../assets/photos/kine-1.jpg" shape="organic" ratio="1 / 1"/><PhotoFrame src="../../assets/photos/pilates-1.jpg" shape="arch" ratio="3 / 4"/><PhotoFrame placeholder="Foto pendiente" ratio="3 / 4" shape="soft"/></div>
+</div>
+<ServiceCard index="02" title="Pilates" text="Movimiento consciente para conectar con tu cuerpo, fortalecerlo y mejorar tu movilidad." image="../../assets/photos/pilates-1.jpg" ratio="4 / 3" ctaLabel="Consultar por Pilates" waMessage="Hola, quisiera consultar por las clases de Pilates."/>
+</div></>)}
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script></body></html>

@@ -1,0 +1,46 @@
+:root{
+--space-1:4px;
+--space-2:8px;
+--space-3:12px;
+--space-4:16px;
+--space-5:24px;
+--space-6:32px;
+--space-7:48px;
+--space-8:64px;
+--space-9:96px;
+--space-10:136px;
+--section-y:clamp(72px,10vw,136px); /* @kind spacing */
+--gutter:clamp(20px,4vw,48px); /* @kind spacing */
+--container:1240px; /* @kind other */
+--container-text:640px; /* @kind other */
+
+--radius-xs:8px;
+--radius-sm:12px;
+--radius-md:20px;
+--radius-lg:32px;
+--radius-xl:48px;
+--radius-pill:999px;
+--radius-organic:58% 42% 52% 48% / 46% 54% 46% 54%;
+--radius-organic-alt:42% 58% 38% 62% / 55% 40% 60% 45%;
+
+--shadow-soft:0 1px 2px rgba(8,63,131,.04),0 8px 24px -12px rgba(8,63,131,.10);
+--shadow-lift:0 2px 4px rgba(8,63,131,.05),0 18px 40px -18px rgba(8,63,131,.18);
+--shadow-float:0 6px 20px -6px rgba(6,46,96,.28);
+
+--ease-out:cubic-bezier(.22,.61,.36,1); /* @kind other */
+--ease-soft:cubic-bezier(.4,0,.2,1); /* @kind other */
+--dur-fast:160ms; /* @kind other */
+--dur-base:260ms; /* @kind other */
+--dur-slow:560ms; /* @kind other */
+--reveal-distance:16px; /* @kind other */
+
+--header-h:76px; /* @kind other */
+--z-header:50; /* @kind other */
+--z-float:60; /* @kind other */
+}
+@media (prefers-reduced-motion:reduce){:root{
+--dur-fast:0ms; /* @kind other */
+--dur-base:0ms; /* @kind other */
+--dur-slow:0ms; /* @kind other */
+--reveal-distance:0px; /* @kind other */
+}}

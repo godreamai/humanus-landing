@@ -1,0 +1,515 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Design tokens — design_handoff_humanus_landing/design-system/tokens
+   ============================================================ */
+:root {
+  color-scheme: light;
+
+  /* Colores */
+  --hu-blue-900: #062e60;
+  --hu-blue-800: #083f83;
+  --hu-blue-700: #0050ad;
+  --hu-blue-600: #1f66bd;
+  --hu-blue-500: #3976b7;
+  --hu-blue-300: #96b7e2;
+  --hu-blue-200: #c9daef;
+  --hu-blue-100: #e3ecf7;
+  --hu-cream-50: #faf8f4;
+  --hu-cream-100: #f1eee7;
+  --hu-cream-200: #e6e1d6;
+  --hu-cream-300: #d5cebf;
+  --hu-ink-900: #292929;
+  --hu-ink-700: #4a4a48;
+  --hu-ink-500: #6e6c67;
+  --hu-white: #ffffff;
+  --hu-whatsapp: #25d366;
+  --hu-whatsapp-ink: #0b3d21;
+
+  --surface-page: var(--hu-cream-50);
+  --surface-warm: var(--hu-cream-100);
+  --surface-card: var(--hu-white);
+  --surface-soft: var(--hu-blue-100);
+  --surface-deep: var(--hu-blue-800);
+  --text-strong: var(--hu-ink-900);
+  --text-body: var(--hu-ink-700);
+  --text-muted: var(--hu-ink-500);
+  --text-brand: var(--hu-blue-700);
+  --text-on-brand-soft: var(--hu-blue-200);
+  --border-subtle: var(--hu-cream-200);
+  --border-strong: var(--hu-cream-300);
+  --focus-ring: var(--hu-blue-600);
+  --action-primary: var(--hu-blue-700);
+  --action-primary-hover: var(--hu-blue-800);
+  --action-primary-press: var(--hu-blue-900);
+  --overlay-photo: rgba(8, 63, 131, 0.78);
+
+  /* Tipografía (familias inyectadas por next/font en layout.tsx) */
+  --font-sans-stack: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
+  --font-script-stack: var(--font-pacifico), "Segoe Script", cursive;
+  --fs-display: clamp(44px, 7vw, 88px);
+  --fs-h1: clamp(38px, 5.6vw, 68px);
+  --fs-h2: clamp(30px, 4vw, 48px);
+  --fs-h3: clamp(22px, 2.4vw, 28px);
+  --fs-lead: clamp(18px, 1.6vw, 21px);
+  --fs-body: 17px;
+  --fs-small: 15px;
+  --fs-caption: 13px;
+  --lh-tight: 1.04;
+  --lh-heading: 1.12;
+  --lh-body: 1.6;
+  --ls-heading: -0.025em;
+  --ls-eyebrow: 0.14em;
+
+  /* Espaciado, radios, sombras */
+  --section-y: clamp(72px, 10vw, 136px);
+  --gutter: clamp(20px, 4vw, 48px);
+  --container: 1240px;
+  --container-text: 640px;
+  --radius-xs: 8px;
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 32px;
+  --radius-xl: 48px;
+  --radius-pill: 999px;
+  --radius-organic: 58% 42% 52% 48% / 46% 54% 46% 54%;
+  --radius-organic-alt: 42% 58% 38% 62% / 55% 40% 60% 45%;
+  --shadow-soft: 0 1px 2px rgba(8, 63, 131, 0.04), 0 8px 24px -12px rgba(8, 63, 131, 0.1);
+  --shadow-lift: 0 2px 4px rgba(8, 63, 131, 0.05), 0 18px 40px -18px rgba(8, 63, 131, 0.18);
+  --shadow-float: 0 6px 20px -6px rgba(6, 46, 96, 0.28);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 160ms;
+  --dur-base: 260ms;
+  --dur-slow: 560ms;
+  --reveal-distance: 16px;
+
+  --header-h: 76px;
+  --z-header: 50;
+  --z-float: 60;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur-base: 0ms;
+    --dur-slow: 0ms;
+    --reveal-distance: 0px;
+  }
+}
+
+/* Tokens expuestos como utilidades de Tailwind (text-hu-blue-700, bg-surface-warm, font-script…) */
+@theme inline {
+  --color-hu-blue-900: var(--hu-blue-900);
+  --color-hu-blue-800: var(--hu-blue-800);
+  --color-hu-blue-700: var(--hu-blue-700);
+  --color-hu-blue-600: var(--hu-blue-600);
+  --color-hu-blue-500: var(--hu-blue-500);
+  --color-hu-blue-300: var(--hu-blue-300);
+  --color-hu-blue-200: var(--hu-blue-200);
+  --color-hu-blue-100: var(--hu-blue-100);
+  --color-hu-cream-50: var(--hu-cream-50);
+  --color-hu-cream-100: var(--hu-cream-100);
+  --color-hu-cream-200: var(--hu-cream-200);
+  --color-hu-cream-300: var(--hu-cream-300);
+  --color-hu-ink-900: var(--hu-ink-900);
+  --color-hu-ink-700: var(--hu-ink-700);
+  --color-hu-ink-500: var(--hu-ink-500);
+  --color-hu-white: var(--hu-white);
+  --color-surface-page: var(--surface-page);
+  --color-surface-warm: var(--surface-warm);
+  --color-surface-deep: var(--surface-deep);
+
+  --font-sans: var(--font-sans-stack);
+  --font-script: var(--font-script-stack);
+
+  --text-display: var(--fs-display);
+  --text-h2: var(--fs-h2);
+  --text-h3: var(--fs-h3);
+  --text-lead: var(--fs-lead);
+  --text-caption: var(--fs-caption);
+}
+
+@theme {
+  --breakpoint-xs: 32.5rem; /* 520px: CTA a ancho completo por debajo */
+  --breakpoint-nav: 65rem; /* 1040px: header completo */
+}
+
+/* ============================================================
+   Base — tokens/base.css + estilos globales de la referencia
+   ============================================================ */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    /* Respaldo sin JS / enlaces directos: alto del header (68px mobile, 76px desktop) + borde */
+    scroll-padding-top: 69px;
+  }
+  body {
+    margin: 0;
+    background: var(--surface-page);
+    color: var(--text-body);
+    font-family: var(--font-sans-stack);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--text-strong);
+    font-family: var(--font-sans-stack);
+    font-weight: 500;
+    letter-spacing: var(--ls-heading);
+    line-height: var(--lh-heading);
+    margin: 0;
+    text-wrap: balance;
+  }
+  p {
+    margin: 0;
+    text-wrap: pretty;
+  }
+  a {
+    color: var(--hu-blue-700);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+  }
+  a:hover {
+    color: var(--hu-blue-800);
+  }
+  :focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+  }
+  @media (min-width: 1040px) {
+    html {
+      scroll-padding-top: 77px;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+/* ============================================================
+   Componentes
+   ============================================================ */
+@layer components {
+  .container-hu {
+    max-width: var(--container);
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+  }
+
+  .hu-script {
+    font-family: var(--font-script-stack);
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1;
+  }
+
+  .hu-eyebrow {
+    font-size: var(--fs-caption);
+    font-weight: 600;
+    letter-spacing: var(--ls-eyebrow);
+    text-transform: uppercase;
+    color: var(--text-brand);
+    line-height: var(--lh-body);
+  }
+
+  /* ---------- Button (core/Button.jsx) ---------- */
+  .btn {
+    --btn-bg: var(--action-primary);
+    --btn-bg-hover: var(--action-primary-hover);
+    --btn-fg: var(--hu-white);
+    --btn-bd: transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: var(--btn-h, 48px);
+    padding: 0 var(--btn-px, 22px);
+    border-radius: var(--radius-pill);
+    border: 1.5px solid var(--btn-bd);
+    background: var(--btn-bg);
+    color: var(--btn-fg);
+    font-family: var(--font-sans-stack);
+    font-size: var(--btn-fs, 15px);
+    font-weight: 600;
+    letter-spacing: 0.005em;
+    line-height: 1.2;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    transition:
+      background var(--dur-base) var(--ease-soft),
+      transform var(--dur-fast) var(--ease-soft);
+  }
+  .btn:hover {
+    background: var(--btn-bg-hover);
+    color: var(--btn-fg);
+  }
+  .btn:active {
+    transform: scale(0.98);
+  }
+  .btn-primary:active {
+    background: var(--action-primary-press);
+  }
+  .btn-secondary {
+    --btn-bg: transparent;
+    --btn-bg-hover: var(--surface-soft);
+    --btn-fg: var(--text-brand);
+    --btn-bd: var(--hu-blue-300);
+  }
+  .btn-ghost {
+    --btn-bg: transparent;
+    --btn-bg-hover: var(--surface-soft);
+    --btn-fg: var(--text-brand);
+  }
+  .btn-light {
+    --btn-bg: var(--hu-white);
+    --btn-bg-hover: var(--hu-blue-100);
+    --btn-fg: var(--hu-blue-800);
+  }
+  .btn-sm {
+    --btn-h: 40px;
+    --btn-px: 16px;
+    --btn-fs: 14px;
+  }
+  .btn-md {
+    --btn-h: 48px;
+    --btn-px: 22px;
+    --btn-fs: 15px;
+  }
+  .btn-lg {
+    --btn-h: 56px;
+    --btn-px: 28px;
+    --btn-fs: 16px;
+  }
+  .btn-icon-right {
+    transition: transform var(--dur-base) var(--ease-out);
+  }
+  .btn:hover .btn-icon-right {
+    transform: translateX(3px);
+  }
+  /* Por debajo de 520px los CTA de sección pasan a ancho completo */
+  @media (max-width: 519.98px) {
+    .btn-block-mobile {
+      display: flex;
+      width: 100%;
+      white-space: normal;
+      text-align: center;
+      padding-block: 10px;
+    }
+  }
+
+  /* ---------- PhotoFrame (sections/PhotoFrame.jsx) ---------- */
+  .photo-frame {
+    position: relative;
+    overflow: hidden;
+    background: var(--surface-soft);
+    /* Safari: recorta correctamente el zoom dentro de radios orgánicos */
+    isolation: isolate;
+  }
+  .photo-frame img {
+    transition: transform var(--dur-slow) var(--ease-out);
+  }
+  .photo-frame:hover img {
+    transform: scale(1.03);
+  }
+  .photo-placeholder {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 16px;
+    background: repeating-linear-gradient(
+      135deg,
+      var(--hu-blue-100) 0 12px,
+      var(--hu-cream-100) 12px 24px
+    );
+  }
+
+  /* ---------- Header (navigation/SiteHeader.jsx) ---------- */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: var(--z-header);
+    background: transparent;
+    border-bottom: 1px solid transparent;
+    transition:
+      background var(--dur-base) var(--ease-soft),
+      border-color var(--dur-base);
+  }
+  .site-header[data-scrolled="true"],
+  .site-header[data-open="true"] {
+    background: rgba(250, 248, 244, 0.92);
+  }
+  .site-header[data-scrolled="true"] {
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    border-bottom-color: var(--border-subtle);
+  }
+  .nav-link {
+    padding: 10px 14px;
+    border-radius: var(--radius-pill);
+    font-size: 15px;
+    font-weight: 500;
+    white-space: nowrap;
+    text-decoration: none;
+    color: var(--text-strong);
+    transition:
+      color var(--dur-fast),
+      background var(--dur-fast);
+  }
+  .nav-link:hover {
+    color: var(--hu-blue-800);
+  }
+  .nav-link[aria-current="true"] {
+    color: var(--text-brand);
+  }
+  .mobile-nav-link {
+    display: block;
+    padding: 14px 4px;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+    color: var(--text-strong);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .mobile-nav-link:hover {
+    color: var(--hu-blue-800);
+  }
+  .mobile-nav-link[aria-current="true"] {
+    color: var(--text-brand);
+  }
+  /* Se superpone al contenido: abrir/cerrar el menú no mueve la página */
+  .mobile-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(250, 248, 244, 0.98);
+    box-shadow: var(--shadow-lift);
+    display: grid;
+    grid-template-rows: 0fr;
+    visibility: hidden;
+    transition:
+      grid-template-rows var(--dur-base) var(--ease-out),
+      visibility 0s linear var(--dur-base);
+  }
+  .site-header[data-open="true"] .mobile-menu {
+    grid-template-rows: 1fr;
+    visibility: visible;
+    transition:
+      grid-template-rows var(--dur-base) var(--ease-out),
+      visibility 0s;
+  }
+
+  /* ---------- Floating WhatsApp (navigation/FloatingWhatsApp.jsx) ---------- */
+  .wa-float {
+    position: fixed;
+    right: max(16px, env(safe-area-inset-right));
+    bottom: max(16px, env(safe-area-inset-bottom));
+    z-index: var(--z-float);
+    display: inline-flex;
+    align-items: center;
+    gap: 0;
+    height: 56px;
+    padding: 0 16px;
+    border-radius: var(--radius-pill);
+    background: var(--hu-whatsapp);
+    color: var(--hu-whatsapp-ink);
+    box-shadow: var(--shadow-float);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition:
+      gap var(--dur-base) var(--ease-out),
+      padding var(--dur-base) var(--ease-out),
+      opacity var(--dur-base),
+      visibility var(--dur-base);
+  }
+  .wa-float-label {
+    max-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: max-width var(--dur-base) var(--ease-out);
+  }
+  .wa-float:hover,
+  .wa-float:focus-visible {
+    gap: 10px;
+    padding: 0 22px 0 16px;
+    color: var(--hu-whatsapp-ink);
+  }
+  .wa-float:hover .wa-float-label,
+  .wa-float:focus-visible .wa-float-label {
+    max-width: 140px;
+  }
+  /* Con el menú mobile abierto el botón flotante no compite con la navegación */
+  html[data-menu-open] .wa-float {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* ============================================================
+   Animaciones
+   ============================================================ */
+
+/* Hero: lo visible al cargar anima de inmediato, sin depender de JS (no retrasa el LCP). */
+@keyframes hu-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(var(--reveal-distance));
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.hero-reveal {
+  animation: hu-reveal var(--dur-slow) var(--ease-out) backwards;
+}
+.hero-reveal[data-delay="1"] {
+  animation-delay: 100ms;
+}
+
+/* Reveal on scroll. El estado inicial se aplica solo si JS está activo (clase .js en <html>),
+   así el contenido nunca queda oculto sin JavaScript. */
+@media (prefers-reduced-motion: no-preference) {
+  .js [data-reveal] {
+    opacity: 0;
+    transform: translateY(var(--reveal-distance));
+    transition:
+      opacity var(--dur-slow) var(--ease-out),
+      transform var(--dur-slow) var(--ease-out);
+  }
+  .js [data-reveal="1"] {
+    transition-delay: 100ms;
+  }
+  .js [data-reveal="2"] {
+    transition-delay: 200ms;
+  }
+  .js [data-reveal].is-revealed {
+    opacity: 1;
+    transform: none;
+  }
+}

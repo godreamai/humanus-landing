@@ -1,0 +1,22 @@
+<!-- @dsCard group="Components" viewport="700x520" name="Core — Button, Pill, Logo, Icon" -->
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script>window.HUMANUS_ASSET_BASE='../../assets/logo/'</script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{margin:0;padding:24px;background:var(--surface-page)}.l{font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);margin:0 0 10px}.r{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:22px}</style>
+</head><body><div id="root"></div>
+<script type="text/babel">
+const { Button, Icon, Pill, Logo, SectionHeading, PhotoFrame, ServiceCard, SiteHeader, FloatingWhatsApp } = window.HumanusDesignSystem_dece33;
+function App(){return (<>
+<p className="l">Buttons</p>
+<div className="r"><Button size="lg" icon="whatsapp" waMessage="Hola, quisiera hacer una consulta sobre los servicios de Humanus.">Consultanos por WhatsApp</Button><Button variant="secondary" size="lg" iconRight="arrow-right" href="#">Conocé nuestros servicios</Button></div>
+<div className="r"><Button size="sm" icon="whatsapp" waMessage="">Consultar</Button><Button variant="ghost" size="sm" iconRight="arrow-right" href="#">Ver más</Button><Button disabled>Deshabilitado</Button></div>
+<div className="r" style={{background:'var(--surface-brand)',padding:16,borderRadius:20}}><Button variant="light" icon="whatsapp" waMessage="">Consultar por Pilates</Button><Button variant="outlineLight" icon="map-pin" href="#">Cómo llegar</Button></div>
+<p className="l">Pills</p>
+<div className="r"><Pill size="lg">Respiratoria</Pill><Pill size="lg">Cardiovascular</Pill><Pill tone="soft">Pilates</Pill><Pill tone="solid">Kinesiología</Pill></div>
+<p className="l">Logo · Icons</p>
+<div className="r" style={{gap:28}}><Logo size={60}/><span style={{background:'var(--surface-deep)',padding:'6px 18px 6px 6px',borderRadius:16,display:'inline-flex'}}><Logo tone="white" size={56} tagline={false}/></span><span style={{display:'flex',gap:14,color:'var(--hu-blue-700)'}}><Icon name="whatsapp"/><Icon name="map-pin"/><Icon name="clock"/><Icon name="instagram"/><Icon name="arrow-right"/><Icon name="menu"/></span></div></>)}
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script></body></html>

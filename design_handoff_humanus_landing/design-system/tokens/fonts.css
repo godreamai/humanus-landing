@@ -1,0 +1,4 @@
+/* Substitutes from Google Fonts — official Humanus fonts are not identified (HUMANUS_DESIGN_SYSTEM.md §4.1).
+   Expressive: Pacifico (fluid connected script, one of the doc's suggested stand-ins).
+   Functional: Nunito Sans (rounded, legible sans, the doc's first suggestion). */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300..900;1,6..12,400..700&family=Pacifico&display=swap');

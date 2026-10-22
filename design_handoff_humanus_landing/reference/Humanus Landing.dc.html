@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Humanus | Kinesiología, rehabilitación y Pilates en San Nicolás de los Arroyos</title>
+  <meta name="description" content="Humanus es un centro de salud y rehabilitación en San Nicolás de los Arroyos. Kinesiología y fisiatría, Pilates y consultorios para profesionales. De La Nación 394.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Humanus | Salud y rehabilitación en San Nicolás">
+  <meta property="og:description" content="Kinesiología y fisiatría, Pilates y consultorios en De La Nación 394, San Nicolás de los Arroyos.">
+  <meta property="og:image" content="assets/photos/kine-1.jpg">
+  <meta property="og:image:alt" content="Espacio de kinesiología y Pilates de Humanus">
+  <meta property="og:locale" content="es_AR">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalBusiness","name":"Humanus — Salud y rehabilitación","telephone":"+5493364599242","address":{"@type":"PostalAddress","streetAddress":"De La Nación 394","addressLocality":"San Nicolás de los Arroyos","addressRegion":"Buenos Aires","postalCode":"2900","addressCountry":"AR"},"sameAs":["https://www.instagram.com/humanus.salud/"]}</script>
+  <link rel="stylesheet" href="_ds/humanus-design-system-dece3379-afcf-47ca-bde1-dc1ad1113aff/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/humanus-design-system-dece3379-afcf-47ca-bde1-dc1ad1113aff/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/humanus-design-system-dece3379-afcf-47ca-bde1-dc1ad1113aff/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/humanus-design-system-dece3379-afcf-47ca-bde1-dc1ad1113aff/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/humanus-design-system-dece3379-afcf-47ca-bde1-dc1ad1113aff/tokens/base.css">
+  <link rel="stylesheet" href="_ds/humanus-design-system-dece3379-afcf-47ca-bde1-dc1ad1113aff/styles.css">
+  <script>window.HUMANUS_ASSET_BASE = "assets/logo/";</script>
+  <script src="_ds/humanus-design-system-dece3379-afcf-47ca-bde1-dc1ad1113aff/_ds_bundle.js"></script>
+  <style>
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:88px}
+    body{margin:0;background:var(--surface-page);color:var(--text-body);overflow-x:hidden}
+    a{color:var(--hu-blue-700)}a:hover{color:var(--hu-blue-800)}
+    :focus-visible{outline:2px solid var(--focus-ring);outline-offset:3px}
+    @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</helmet>
+
+<x-import component-from-global-scope="HumanusDesignSystem_dece33.SiteHeader" position="sticky" scrolled="{{ scrolled }}" links="{{ links }}" wa-message="Hola, ¿cómo están? Quisiera hacer una consulta en Humanus." hint-size="100%,80px"></x-import>
+
+<main>
+  <!-- HERO -->
+  <section id="inicio" data-screen-label="Hero" aria-label="Inicio" style="max-width:var(--container);margin:0 auto;padding:clamp(24px,5vw,64px) var(--gutter) var(--section-y);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:clamp(48px,6vw,88px);align-items:center">
+    <div data-reveal="0" style="display:flex;flex-direction:column;gap:28px">
+      <span class="hu-eyebrow" style="display: none">Salud · Rehabilitación · Movimiento</span>
+      <h1 style="margin:0;font-size:var(--fs-display);line-height:1.02;font-weight:500;letter-spacing:-0.025em;color:var(--hu-blue-700);text-wrap:balance">Tu bienestar<span class="hu-script" style="display: block; transform-origin: left center; color: var(--hu-blue-700); font-size: 0.96em; line-height: 1.1; margin-top: -0.08em; transform: rotate(-3deg);">en cada paso.</span></h1>
+      <p style="margin:0;font-size:var(--fs-lead);line-height:1.55;max-width:500px;color:var(--text-body);text-wrap:pretty">En Humanus te acompañamos a cuidar tu salud y conectar con tu cuerpo a través de la kinesiología, la rehabilitación y el movimiento consciente.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px">
+        <x-import component-from-global-scope="HumanusDesignSystem_dece33.Button" size="lg" icon="whatsapp" wa-message="Hola, ¿cómo están? Quisiera hacer una consulta en Humanus." hint-size="280px,56px">Consultanos por WhatsApp</x-import>
+        <x-import component-from-global-scope="HumanusDesignSystem_dece33.Button" size="lg" variant="secondary" href="#servicios" icon-right="arrow-right" hint-size="270px,56px">Conocé nuestros servicios</x-import>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px 28px;font-size:14px;color:var(--text-muted)">
+        <span style="display:inline-flex;align-items:center;gap:8px"><x-import component-from-global-scope="HumanusDesignSystem_dece33.Icon" name="map-pin" size="{{ 16 }}" hint-size="16px,16px"></x-import>De La Nación 394, San Nicolás</span>
+        <span style="display:inline-flex;align-items:center;gap:8px"><x-import component-from-global-scope="HumanusDesignSystem_dece33.Icon" name="clock" size="{{ 16 }}" hint-size="16px,16px"></x-import>9:00 a 13:00 y 15:00 a 19:00</span>
+      </div>
+    </div>
+    <div data-reveal="1" style="position:relative;max-width:540px;width:100%;justify-self:center">
+      <div aria-hidden="true" style="position:absolute;width:62%;aspect-ratio:1;right:-7%;bottom:-8%;background:var(--hu-blue-700);border-radius:var(--radius-organic);overflow:hidden">
+        <img src="assets/logo/humanus-mark-white.png" alt="" style="position:absolute;width:160%;max-width:none;right:-50%;top:-40%;opacity:.16">
+      </div>
+      <div aria-hidden="true" style="position:absolute;width:20%;aspect-ratio:1;left:-5%;top:7%;background:var(--hu-blue-300);border-radius:var(--radius-organic-alt)"></div>
+      <x-import component-from-global-scope="HumanusDesignSystem_dece33.PhotoFrame" src="assets/photos/kine-1.jpg" alt="Profesional de Humanus acompañando un ejercicio en el reformer de Pilates" shape="arch" ratio="4 / 5" position="58% center" style="position:relative;width:86%" hint-size="86%,560px"></x-import>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section id="nosotros" data-screen-label="Nosotros" aria-label="Sobre Humanus" style="background:var(--surface-warm);padding:var(--section-y) 0">
+    <div style="max-width:var(--container);margin:0 auto;padding:0 var(--gutter);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:clamp(48px,7vw,112px);align-items:center">
+      <div data-reveal="0" style="position:relative;max-width:520px;width:100%">
+        <div aria-hidden="true" style="position:absolute;left:-8%;top:-6%;width:70%;height:78%;border:14px solid var(--hu-blue-700);border-radius:var(--radius-organic);opacity:.9"></div>
+        <x-import component-from-global-scope="HumanusDesignSystem_dece33.PhotoFrame" src="assets/photos/kine-2.jpg" alt="Sala de kinesiología de Humanus con camillas" shape="organic" ratio="1 / 1" style="position:relative" hint-size="100%,480px"></x-import>
+      </div>
+      <div data-reveal="1" style="display:flex;flex-direction:column;gap:28px;max-width:540px">
+        <x-import component-from-global-scope="HumanusDesignSystem_dece33.SectionHeading" as="h2" eyebrow="Nosotros" title="Estamos" script="en cada paso." hint-size="100%,170px"></x-import>
+        <p style="margin:0;font-size:var(--fs-lead);line-height:1.55;color:var(--text-strong);text-wrap:pretty">En Humanus entendemos la salud como un proceso que merece atención, acompañamiento y movimiento consciente.</p>
+        <p style="margin:0;font-size:17px;line-height:1.65;color:var(--text-body);text-wrap:pretty">Buscamos que cada persona encuentre un espacio cercano y profesional para cuidar su bienestar.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios" data-screen-label="Servicios" aria-label="Servicios" style="padding:var(--section-y) 0">
+    <div style="max-width:var(--container);margin:0 auto;padding:0 var(--gutter);display:flex;flex-direction:column;gap:clamp(40px,6vw,72px)">
+      <div data-reveal="0">
+        <x-import component-from-global-scope="HumanusDesignSystem_dece33.SectionHeading" as="h2" eyebrow="Servicios" title="Un espacio para tu bienestar." lead="Conocé las áreas que forman parte de Humanus." hint-size="100%,150px"></x-import>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(40px,3.5vw,48px) clamp(24px,3vw,40px);align-items:start">
+        <div data-reveal="0">
+          <x-import component-from-global-scope="HumanusDesignSystem_dece33.ServiceCard" index="01" title="Kinesiología y rehabilitación" text="Tratamientos personalizados y acompañamiento profesional para cuidar tu salud." image="assets/photos/kine-3.jpg" alt="Sesión de kinesiología en Humanus" cta-label="Consultar por kinesiología" wa-message="Hola, ¿cómo están? Quisiera consultar por kinesiología en Humanus." hint-size="100%,560px"></x-import>
+        </div>
+        <div data-reveal="1">
+          <x-import component-from-global-scope="HumanusDesignSystem_dece33.ServiceCard" index="02" title="Pilates" text="Movimiento consciente para conectar con tu cuerpo, fortalecerlo y mejorar tu movilidad." image="assets/photos/pilates-1.jpg" alt="Clase de Pilates en Humanus" shape="arch" cta-label="Consultar por Pilates" wa-message="Hola, ¿cómo están? Quisiera consultar por las clases de Pilates." hint-size="100%,560px"></x-import>
+        </div>
+        <div data-reveal="2">
+          <x-import component-from-global-scope="HumanusDesignSystem_dece33.ServiceCard" index="03" title="Consultorios" text="Espacios para profesionales de la salud, equipados para recibir la mejor atención integral." image="assets/photos/consul-1.jpg" alt="Consultorio equipado de Humanus" cta-label="Consultar por consultorios" wa-message="Hola, ¿cómo están? Quisiera recibir información sobre los consultorios." hint-size="100%,560px"></x-import>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ÁREAS DE REHABILITACIÓN -->
+  <section id="rehabilitacion" data-screen-label="Rehabilitación" aria-label="Áreas de rehabilitación" style="padding:0 0 var(--section-y)">
+    <div style="max-width:var(--container);margin:0 auto;padding:0 var(--gutter);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:clamp(40px,6vw,96px);align-items:start;border-top:1px solid var(--border-subtle);padding-top:var(--section-y)">
+      <div data-reveal="0" style="display:flex;flex-direction:column;gap:28px;max-width:440px">
+        <span class="hu-eyebrow">Kinesiología</span>
+        <h2 style="margin:0;font-size:var(--fs-h2);line-height:1.08;font-weight:500;letter-spacing:-0.025em;color:var(--hu-blue-700);text-wrap:balance">La kinesiología <em style="font-style:italic;font-weight:400;color:var(--hu-blue-500)">va más allá.</em></h2>
+        <p style="margin:0;font-size:var(--fs-lead);line-height:1.55;color:var(--text-body);text-wrap:pretty">En Humanus trabajamos diferentes áreas de rehabilitación para acompañar en cada etapa de recuperación.</p>
+        <div>
+          <x-import component-from-global-scope="HumanusDesignSystem_dece33.Button" icon="whatsapp" wa-message="Hola, ¿cómo están? Quisiera consultar por kinesiología en Humanus." hint-size="250px,48px">Consultar por kinesiología</x-import>
+        </div>
+      </div>
+      <ol style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column">
+        <sc-for list="{{ areas }}" as="a" hint-placeholder-count="4">
+          <li data-reveal="0" style="display:grid;grid-template-columns:56px minmax(0,1fr);gap:16px;padding:32px 0;border-bottom:1px solid var(--border-strong)">
+            <span aria-hidden="true" style="font-size:15px;font-weight:600;letter-spacing:.08em;color:var(--hu-blue-500);padding-top:10px">{{ a.n }}</span>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <h3 style="margin:0;font-size:clamp(24px,2.4vw,30px);font-weight:500;letter-spacing:-0.02em;color:var(--text-strong)">{{ a.name }}</h3>
+              <p style="margin:0;font-size:17px;line-height:1.6;color:var(--text-body);max-width:560px;text-wrap:pretty">{{ a.text }}</p>
+            </div>
+          </li>
+        </sc-for>
+      </ol>
+    </div>
+  </section>
+
+  <!-- PILATES -->
+  <section id="pilates" data-screen-label="Pilates" aria-label="Pilates" style="padding:0 0 var(--section-y)">
+    <div style="max-width:var(--container);margin:0 auto;padding:0 var(--gutter)">
+      <div data-reveal="0" style="position:relative;overflow:hidden;background:var(--surface-deep);border-radius:var(--radius-xl);padding:clamp(36px,6vw,88px)">
+        <img src="assets/photos/pilates-3.jpg" alt="" aria-hidden="true" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;max-width:none">
+        <div aria-hidden="true" style="position:absolute;inset:0;background:var(--overlay-photo)"></div>
+        <img src="assets/logo/humanus-mark-white.png" alt="" aria-hidden="true" style="position:absolute;width:min(70vw,820px);max-width:none;right:-18%;top:-30%;opacity:.09;pointer-events:none">
+        <div style="position:relative;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:clamp(40px,5vw,72px);align-items:center">
+          <div style="display:flex;flex-direction:column;gap:28px">
+            <x-import component-from-global-scope="HumanusDesignSystem_dece33.SectionHeading" as="h2" tone="dark" eyebrow="Pilates" title="Cada movimiento" script="tiene una intención." hint-size="100%,170px"></x-import>
+            <p style="margin:0;font-size:var(--fs-lead);font-style:italic;line-height:1.45;color:var(--hu-cream-50);max-width:460px">Pilates es mucho más que hacer ejercicios en una máquina.</p>
+            <p style="margin:0;font-size:17px;line-height:1.65;color:var(--hu-blue-200);max-width:460px;text-wrap:pretty">Trabajamos el movimiento consciente, la fuerza, el control corporal y la coordinación, priorizando la calidad de cada movimiento.</p>
+            <div>
+              <x-import component-from-global-scope="HumanusDesignSystem_dece33.Button" variant="light" size="lg" icon="whatsapp" wa-message="Hola, ¿cómo están? Quisiera consultar por las clases de Pilates." hint-size="280px,56px">Consultá por nuestras clases</x-import>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:end">
+            <x-import component-from-global-scope="HumanusDesignSystem_dece33.PhotoFrame" src="assets/photos/pilates-2.jpg" alt="Ejercicio de Pilates en colchoneta" shape="arch" ratio="3 / 4" hint-size="100%,340px"></x-import>
+            <x-import component-from-global-scope="HumanusDesignSystem_dece33.PhotoFrame" src="assets/photos/pilates-1.jpg" alt="Sala de Pilates de Humanus" shape="soft" ratio="1 / 1" style="margin-bottom:40px" hint-size="100%,250px"></x-import>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NUESTRO ESPACIO -->
+  <section id="espacio" data-screen-label="Nuestro espacio" aria-label="Nuestro espacio" style="padding:0 0 var(--section-y)">
+    <div style="max-width:var(--container);margin:0 auto;padding:0 var(--gutter);display:flex;flex-direction:column;gap:clamp(36px,5vw,64px)">
+      <div data-reveal="0">
+        <x-import component-from-global-scope="HumanusDesignSystem_dece33.SectionHeading" as="h2" align="center" eyebrow="Nuestro espacio" title="Un espacio" script="pensado para vos." hint-size="100%,170px"></x-import>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:flex-start">
+        <figure data-reveal="0" style="margin:0;display:flex;flex-direction:column;gap:10px;flex:7 1 440px;min-width:0">
+          <x-import component-from-global-scope="HumanusDesignSystem_dece33.PhotoFrame" placeholder="Foto pendiente: entrada del establecimiento" ratio="16 / 10" shape="soft" hint-size="100%,380px"></x-import>
+          <figcaption style="font-size:14px;color:var(--text-muted);padding-left:4px">Entrada · De La Nación 394</figcaption>
+        </figure>
+        <figure data-reveal="1" style="margin:0;display:flex;flex-direction:column;gap:10px;flex:5 1 300px;min-width:0">
+          <x-import component-from-global-scope="HumanusDesignSystem_dece33.PhotoFrame" src="assets/photos/consul-3.jpg" alt="Espacio de atención de Humanus" ratio="4 / 5" shape="soft" hint-size="100%,380px"></x-import>
+          <figcaption style="font-size:14px;color:var(--text-muted);padding-left:4px">Espacios de atención</figcaption>
+        </figure>
+        <figure data-reveal="0" style="margin:0;display:flex;flex-direction:column;gap:10px;flex:5 1 300px;min-width:0">
+          <x-import component-from-global-scope="HumanusDesignSystem_dece33.PhotoFrame" src="assets/photos/pilates-2.jpg" alt="Equipamiento de la sala de Pilates" ratio="4 / 5" shape="soft" hint-size="100%,380px"></x-import>
+          <figcaption style="font-size:14px;color:var(--text-muted);padding-left:4px">Sala de Pilates</figcaption>
+        </figure>
+        <figure data-reveal="1" style="margin:0;display:flex;flex-direction:column;gap:10px;flex:7 1 440px;min-width:0">
+          <x-import component-from-global-scope="HumanusDesignSystem_dece33.PhotoFrame" src="assets/photos/consul-2.jpg" alt="Instalaciones de Humanus" ratio="16 / 10" shape="soft" hint-size="100%,380px"></x-import>
+          <figcaption style="font-size:14px;color:var(--text-muted);padding-left:4px">Instalaciones</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" data-screen-label="Contacto" aria-label="Ubicación y contacto" style="background:var(--surface-warm);padding:var(--section-y) 0">
+    <div style="max-width:var(--container);margin:0 auto;padding:0 var(--gutter);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:clamp(40px,5vw,64px);align-items:stretch">
+      <div data-reveal="0" style="display:flex;flex-direction:column;gap:32px">
+        <x-import component-from-global-scope="HumanusDesignSystem_dece33.SectionHeading" as="h2" eyebrow="Ubicación y contacto" title="Te esperamos" script="en Humanus." hint-size="100%,170px"></x-import>
+        <dl style="margin:0;display:flex;flex-direction:column;gap:20px">
+          <div style="display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start">
+            <span aria-hidden="true" style="width:44px;height:44px;border-radius:50%;background:var(--surface-soft);color:var(--hu-blue-700);display:grid;place-items:center"><x-import component-from-global-scope="HumanusDesignSystem_dece33.Icon" name="map-pin" size="{{ 20 }}" hint-size="20px,20px"></x-import></span>
+            <div><dt style="font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted)">Dirección</dt><dd style="margin:2px 0 0;color:var(--text-strong);font-size:17px">De La Nación 394, San Nicolás de los Arroyos, Buenos Aires, Argentina</dd></div>
+          </div>
+          <div style="display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start">
+            <span aria-hidden="true" style="width:44px;height:44px;border-radius:50%;background:var(--surface-soft);color:var(--hu-blue-700);display:grid;place-items:center"><x-import component-from-global-scope="HumanusDesignSystem_dece33.Icon" name="clock" size="{{ 20 }}" hint-size="20px,20px"></x-import></span>
+            <div><dt style="font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted)">Horario</dt><dd style="margin:2px 0 0;color:var(--text-strong);font-size:17px">9:00 a 13:00 y 15:00 a 19:00</dd></div>
+          </div>
+          <div style="display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start">
+            <span aria-hidden="true" style="width:44px;height:44px;border-radius:50%;background:var(--surface-soft);color:var(--hu-blue-700);display:grid;place-items:center"><x-import component-from-global-scope="HumanusDesignSystem_dece33.Icon" name="whatsapp" size="{{ 20 }}" hint-size="20px,20px"></x-import></span>
+            <div><dt style="font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted)">WhatsApp</dt><dd style="margin:2px 0 0;font-size:17px"><a href="https://wa.me/543364599242" target="_blank" rel="noopener" style="color:var(--text-strong)">+54 9 336 459-9242</a></dd></div>
+          </div>
+          <div style="display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start">
+            <span aria-hidden="true" style="width:44px;height:44px;border-radius:50%;background:var(--surface-soft);color:var(--hu-blue-700);display:grid;place-items:center"><x-import component-from-global-scope="HumanusDesignSystem_dece33.Icon" name="instagram" size="{{ 20 }}" hint-size="20px,20px"></x-import></span>
+            <div><dt style="font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted)">Instagram</dt><dd style="margin:2px 0 0;font-size:17px"><a href="https://www.instagram.com/humanus.salud/" target="_blank" rel="noopener" style="color:var(--text-strong)">@humanus.salud</a></dd></div>
+          </div>
+        </dl>
+        <div style="display:flex;flex-wrap:wrap;gap:12px">
+          <x-import component-from-global-scope="HumanusDesignSystem_dece33.Button" size="lg" icon="whatsapp" wa-message="Hola, ¿cómo están? Quisiera hacer una consulta en Humanus." hint-size="250px,56px">Escribir por WhatsApp</x-import>
+          <x-import component-from-global-scope="HumanusDesignSystem_dece33.Button" size="lg" variant="secondary" icon="map-pin" href="https://www.google.com/maps/search/?api=1&amp;query=Humanus%2C%20De%20La%20Naci%C3%B3n%20394%2C%20San%20Nicol%C3%A1s%20de%20los%20Arroyos" target="_blank" rel="noopener" hint-size="190px,56px">Cómo llegar</x-import>
+          <x-import component-from-global-scope="HumanusDesignSystem_dece33.Button" size="lg" variant="ghost" icon="instagram" href="https://www.instagram.com/humanus.salud/" target="_blank" rel="noopener" hint-size="200px,56px">Ver Instagram</x-import>
+        </div>
+      </div>
+      <sc-if value="{{ showMap }}" hint-placeholder-val="{{ true }}">
+        <div data-reveal="1" style="border-radius:var(--radius-lg);overflow:hidden;min-height:400px;background:var(--surface-soft);border:1px solid var(--border-subtle)">
+          <iframe title="Mapa: Humanus, De La Nación 394, San Nicolás de los Arroyos" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=De%20La%20Naci%C3%B3n%20394%2C%20San%20Nicol%C3%A1s%20de%20los%20Arroyos%2C%20Buenos%20Aires&amp;output=embed" style="width:100%;height:100%;min-height:400px;border:0;display:block"></iframe>
+        </div>
+      </sc-if>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section data-screen-label="CTA final" aria-label="Contacto final" style="padding:var(--section-y) 0">
+    <div style="max-width:var(--container);margin:0 auto;padding:0 var(--gutter)">
+      <div data-reveal="0" style="position:relative;overflow:hidden;background:#0050AD;border-radius:var(--radius-xl);padding:clamp(56px,8vw,112px) clamp(28px,6vw,88px);display:flex;flex-direction:column;align-items:center;text-align:center;gap:28px">
+        <img src="assets/logo/humanus-mark-white.png" alt="" aria-hidden="true" style="position:absolute;width:min(90vw,760px);max-width:none;left:-14%;bottom:-48%;opacity:.1;pointer-events:none">
+        <div aria-hidden="true" style="position:absolute;width:180px;aspect-ratio:1;right:-40px;top:-40px;background:var(--hu-blue-300);border-radius:var(--radius-organic);opacity:.5"></div>
+        <h2 style="position:relative;margin:0;font-size:var(--fs-h2);line-height:1.1;font-weight:500;letter-spacing:-0.025em;color:#fff;text-wrap:balance">Tu bienestar<span class="hu-script" style="display:block;font-size:0.96em;line-height:1.4;color:var(--hu-blue-200);transform:rotate(-2deg)">merece acompañamiento.</span></h2>
+        <p style="position:relative;margin:0;font-size:var(--fs-lead);line-height:1.55;color:var(--hu-blue-100);max-width:520px;text-wrap:pretty">Estamos para ayudarte a encontrar el espacio y la atención que necesitás.</p>
+        <div style="position:relative">
+          <x-import component-from-global-scope="HumanusDesignSystem_dece33.Button" variant="light" size="lg" icon="whatsapp" wa-message="Hola, ¿cómo están? Quisiera hacer una consulta en Humanus." hint-size="260px,56px">Hablemos por WhatsApp</x-import>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer data-screen-label="Footer" style="background:var(--surface-deep);color:var(--hu-blue-200);padding:72px 0 104px">
+  <div style="max-width:var(--container);margin:0 auto;padding:0 var(--gutter)">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:40px">
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <x-import component-from-global-scope="HumanusDesignSystem_dece33.Logo" tone="white" size="{{ 64 }}" hint-size="200px,64px"></x-import>
+        <p class="hu-script" style="margin:0;font-size:26px;line-height:1.4;color:var(--hu-blue-300);transform:rotate(-2deg);transform-origin:left">Estamos en cada paso.</p>
+      </div>
+      <nav aria-label="Secciones">
+        <h3 style="margin:0 0 14px;color:#fff;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase">Secciones</h3>
+        <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;font-size:15px">
+          <sc-for list="{{ links }}" as="l" hint-placeholder-count="5">
+            <li><a href="{{ l.href }}" style="color:#fff;text-decoration:none" style-hover="color:var(--hu-blue-300)">{{ l.label }}</a></li>
+          </sc-for>
+        </ul>
+      </nav>
+      <div>
+        <h3 style="margin:0 0 14px;color:#fff;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase">Contacto</h3>
+        <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;font-size:15px">
+          <li><a href="https://wa.me/543364599242" target="_blank" rel="noopener" style="color:#fff;text-decoration:none" style-hover="color:var(--hu-blue-300)">WhatsApp · +54 9 336 459-9242</a></li>
+          <li><a href="https://www.instagram.com/humanus.salud/" target="_blank" rel="noopener" style="color:#fff;text-decoration:none" style-hover="color:var(--hu-blue-300)">Instagram · @humanus.salud</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="margin:0 0 14px;color:#fff;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase">Visitanos</h3>
+        <address style="font-style:normal;display:flex;flex-direction:column;gap:8px;font-size:15px">
+          <span>De La Nación 394</span><span>San Nicolás de los Arroyos, Buenos Aires</span><span>9:00 a 13:00 y 15:00 a 19:00</span>
+        </address>
+      </div>
+    </div>
+    <div style="margin-top:56px;padding-top:24px;border-top:1px solid rgba(255,255,255,.14);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:13px">
+      <span>© {{ year }} Humanus — Salud y rehabilitación.</span>
+      <span>La información de este sitio no reemplaza la consulta con un profesional.</span>
+    </div>
+  </div>
+</footer>
+
+<sc-if value="{{ showFloating }}" hint-placeholder-val="{{ true }}">
+  <x-import component-from-global-scope="HumanusDesignSystem_dece33.FloatingWhatsApp" message="Hola, ¿cómo están? Quisiera hacer una consulta en Humanus." label="Consultanos" hint-size="56px,56px"></x-import>
+</sc-if>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showMap&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;showFloatingWhatsApp&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  state = { scrolled: false };
+  componentDidMount() {
+    this.onScroll = () => {
+      const s = window.scrollY > 12;
+      if (s !== this.state.scrolled) this.setState({ scrolled: s });
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.onScroll();
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+    setTimeout(() => {
+      const els = document.querySelectorAll('[data-reveal]');
+      this.io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (!e.isIntersecting) return;
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'none';
+          this.io.unobserve(e.target);
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      els.forEach((el) => {
+        const r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight * 0.9) {
+          el.animate([{ opacity: 0, transform: 'translateY(16px)' }, { opacity: 1, transform: 'none' }], { duration: 560, delay: (+el.dataset.reveal || 0) * 100, easing: 'cubic-bezier(.22,.61,.36,1)', fill: 'backwards' });
+          return;
+        }
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(16px)';
+        el.style.transition = 'opacity 560ms cubic-bezier(.22,.61,.36,1), transform 560ms cubic-bezier(.22,.61,.36,1)';
+        el.style.transitionDelay = (+el.dataset.reveal || 0) * 100 + 'ms';
+        this.io.observe(el);
+      });
+    }, 0);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScroll);
+    if (this.io) this.io.disconnect();
+  }
+  renderVals() {
+    return {
+      scrolled: this.state.scrolled,
+      showMap: this.props.showMap ?? true,
+      showFloating: this.props.showFloatingWhatsApp ?? true,
+      year: new Date().getFullYear(),
+      links: [
+        { label: 'Inicio', href: '#inicio' },
+        { label: 'Nosotros', href: '#nosotros' },
+        { label: 'Servicios', href: '#servicios' },
+        { label: 'Nuestro espacio', href: '#espacio' },
+        { label: 'Contacto', href: '#contacto' },
+      ],
+      areas: [
+        { n: '01', name: 'Respiratoria', text: 'Busca mejorar la función respiratoria mediante técnicas y ejercicios específicos, ayudando a disminuir síntomas, aumentar la tolerancia al esfuerzo y favorecer la autonomía del paciente.' },
+        { n: '02', name: 'Cardiovascular', text: 'Orientada a mejorar la capacidad física y funcional de personas con enfermedades cardiovasculares mediante ejercicios supervisados que favorecen la recuperación y la calidad de vida.' },
+        { n: '03', name: 'Traumatológica', text: 'Enfocada en recuperar movilidad, fuerza y funcionalidad después de lesiones, traumatismos o cirugías, aliviando dolor y facilitando el retorno a las actividades cotidianas.' },
+        { n: '04', name: 'Neurológica', text: 'Enfocada en recuperación y mejora de funciones motoras afectadas por enfermedades o lesiones del sistema nervioso, con tratamientos personalizados que buscan favorecer movilidad, autonomía y calidad de vida.' },
+      ],
+    };
+  }
+}
+
+</script>
+</body>
+</html>
