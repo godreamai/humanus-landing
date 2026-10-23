@@ -90,7 +90,8 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
         />
       </head>
-      <body>{children}</body>
+      {/* suppressHydrationWarning: extensiones del navegador (p. ej. ColorZilla) agregan atributos al <body> */}
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }

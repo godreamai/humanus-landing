@@ -10,7 +10,7 @@ export function Hero() {
     <section
       id="inicio"
       aria-labelledby="inicio-title"
-      className="container-hu grid grid-cols-[repeat(auto-fit,minmax(min(100%,440px),1fr))] overflow-x-clip items-center gap-[clamp(48px,6vw,88px)] pt-[clamp(24px,5vw,64px)] pb-[var(--section-y)]"
+      className="container-hu grid grid-cols-[repeat(auto-fit,minmax(min(100%,440px),1fr))] overflow-x-clip items-center gap-[clamp(48px,6vw,88px)] pt-[clamp(48px,7vw,96px)] pb-[var(--section-y)]"
     >
       <div className="hero-reveal flex flex-col gap-7">
         <h1
