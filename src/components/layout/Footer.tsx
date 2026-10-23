@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { cacheLife } from "next/cache";
 import { FOOTER } from "@/config/content";
 import { NAV_LINKS, SITE, WA_MSG, waLink } from "@/config/site";
@@ -65,11 +66,29 @@ export async function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-wrap justify-between gap-3 max-md:flex-col max-md:items-center max-md:text-center border-t border-white/[.14] pt-6 text-[13px]">
+        <div className="mt-14 mb-6 flex justify-center">
+          <p className="m-0 inline-flex items-center gap-2.5 rounded-2xl border border-white/[.14] bg-white/[.06] px-5 py-3 text-center text-[13px] leading-snug text-white">
+            <svg aria-hidden="true" viewBox="0 0 24 24" className="size-4 shrink-0 text-hu-blue-300" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 16v-4M12 8h.01" />
+            </svg>
+            {FOOTER.legal}
+          </p>
+        </div>
+        <div className="flex flex-wrap justify-between gap-3 max-md:flex-col max-md:items-center max-md:text-center border-t border-white/[.14] pt-6 text-[13px]">
           <span>
-            © {year} {SITE.name}.
+            © {year} humanus.salud. Todos los derechos reservados.
           </span>
-          <span>{FOOTER.legal}</span>
+          <a
+            href="https://godreamai.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Creado por GoDreamAI"
+            className="inline-flex items-center gap-2 text-inherit no-underline opacity-80 transition-opacity hover:opacity-100"
+          >
+            Creado por
+            <Image src="/logos/godreamai-white.png" alt="GoDreamAI" width={584} height={302} className="h-7 w-auto" />
+          </a>
         </div>
       </div>
     </footer>
