@@ -25,16 +25,17 @@ export function PilatesSection() {
           />
 
           <div className="relative grid grid-cols-[repeat(auto-fit,minmax(min(100%,360px),1fr))] items-center gap-[clamp(40px,5vw,72px)]">
-            <div className="flex flex-col gap-7">
+            <div className="flex flex-col gap-7 max-md:items-center max-md:text-center">
               <SectionHeading
                 id="pilates-title"
+                mobileCenter
                 tone="dark"
                 eyebrow={PILATES.eyebrow}
                 title={PILATES.title}
                 script={PILATES.script}
               />
-              <p className="max-w-[460px] text-lead leading-[1.45] text-hu-cream-50 italic">{PILATES.subtitle}</p>
-              <p className="max-w-[460px] text-[17px] leading-[1.65] text-hu-blue-200">{PILATES.body}</p>
+              <p className="max-w-[460px] max-md:mx-auto text-lead leading-[1.45] text-hu-cream-50 italic">{PILATES.subtitle}</p>
+              <p className="max-w-[460px] max-md:mx-auto text-[17px] leading-[1.65] text-hu-blue-200">{PILATES.body}</p>
               <div>
                 <Button variant="light" size="lg" icon="whatsapp" wa="pilates" blockOnMobile>
                   {PILATES.cta}

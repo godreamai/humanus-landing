@@ -33,7 +33,7 @@ export function Hero() {
           </span>
         </h1>
 
-        <p className="max-w-[500px] text-lead leading-[1.55] text-hu-ink-700">{HERO.description}</p>
+        <p className="max-w-[500px] text-lead leading-[1.55] text-hu-ink-700 max-md:mx-auto max-md:text-center">{HERO.description}</p>
 
         <div className="flex flex-wrap gap-3">
           <Button size="lg" icon="whatsapp" wa="general" blockOnMobile>
